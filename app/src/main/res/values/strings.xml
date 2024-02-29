@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RaionAppProject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button">button</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="healthyfood">healthyfood</string>
+    <string name="elips">elips</string>
+    <string name="hello_world">Hello World</string>
+</resources>
