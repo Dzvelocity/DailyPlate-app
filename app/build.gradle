@@ -47,7 +47,5 @@ dependencies {
     //page indicator
 
     implementation("com.tbuonomo:dotsindicator:5.0")
-    implementation 'com.github.fajaragungpramana:dots-indicator:0.0.5'
-    implementation 'it.xabaras.android:viewpagerindicator:2.0'
 
 }
