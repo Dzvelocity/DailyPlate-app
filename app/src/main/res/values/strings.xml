@@ -10,4 +10,8 @@
     <string name="login_fragment">Login Fragment</string>
     <string name="daftar_fragment">Daftar Fragment</string>
     <string name="sign_up_fragment">Sign Up Fragment</string>
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="email">Email</string>
 </resources>
