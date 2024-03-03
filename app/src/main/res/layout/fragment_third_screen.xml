@@ -7,31 +7,45 @@
     tools:context=".screens.ThirdScreen"
     android:padding="20dp">
 
+
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
+        android:id="@+id/imageView4"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="65dp"
-        android:layout_marginTop="100dp"
-        android:contentDescription="@string/elips"
-        android:src="@drawable/ellipse_3"
+        android:contentDescription="@string/healthyfood"
+        android:src="@drawable/onboard3_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="325dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="65dp"
-        android:contentDescription="@string/healthyfood"
-        android:src="@drawable/healthy_lifestyle"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trivia3"
+        android:fontFamily="@font/sf_regular"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:textColor="@color/green_40"
+        android:layout_marginTop="500dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:text="@string/trivia_desc3"
+        android:textAlignment="center"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="530dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/btn_login"
@@ -39,12 +53,14 @@
         android:layout_height="48dp"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="190dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="700dp"
         android:background="@drawable/button_green_background"
         android:text="@string/masuk"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:contentDescription="@string/button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="19sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -54,12 +70,14 @@
         android:layout_height="48dp"
         android:layout_marginStart="190dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginTop="700dp"
         android:background="@drawable/button_white_background"
         android:text="@string/daftar"
+        android:textAllCaps="false"
         android:textColor="@color/green"
-        android:contentDescription="@string/button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="19sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

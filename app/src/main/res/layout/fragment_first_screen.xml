@@ -7,47 +7,60 @@
     android:padding="20dp"
     tools:context=".screens.FirstScreen">
 
-
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="383dp"
-        android:contentDescription="@string/elips"
-        android:src="@drawable/ellipse"
+        android:text="@string/trivia1"
+        android:fontFamily="@font/sf_regular"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:textColor="@color/green_40"
+        android:layout_marginTop="500dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:text="@string/trivia_desc1"
+        android:textAlignment="center"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="530dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="55dp"
         android:contentDescription="@string/healthyfood"
-        android:src="@drawable/eating_healthy_food"
+        android:src="@drawable/onboard1_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/btn_next1"
-        android:layout_width="0dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginTop="700dp"
         android:background="@drawable/button_green_background"
         android:text="@string/selanjutnya"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:contentDescription="@string/button"
+        android:fontFamily="@font/sf_regular"
+        android:textSize="19sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

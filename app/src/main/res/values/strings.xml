@@ -14,4 +14,25 @@
     <string name="daftar">Daftar</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="dailyplate">DailyPlate</string>
+    <string name="lupa_sandi">Lupa sandi</string>
+    <string name="selamat_datang">Selamat Datang,</string>
+    <string name="greeting_daftar">Silahkan isi untuk membuat akun</string>
+    <string name="greeting_login">Silahkan masuk menggunakan akun anda</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="nomor_telepon">Nomor telepon</string>
+    <string name="sandi">Sandi</string>
+    <string name="konf_sandi">Konfirmasi Sandi</string>
+    <string name="login_alt">Sudah punya akun?</string>
+    <string name="login2"><u>Masuk</u></string>
+    <string name="forgot_pass"><u>Lupa sandi?</u></string>
+    <string name="trivia1">Ingin memakan makanan yang sehat?</string>
+    <string name="trivia_desc1">Apakah anda merasa makan yang anda konsumsi tidak sehat, dan anda bingung harus masak makanan sehat apa?</string>
+    <string name="trivia2">Ingin tahu resep makanan-makanan sehat?</string>
+    <string name="trivia_desc2">Anda ingin mencoba perilaku baru dengan memasak makanan sendiri tetapi bingung apa resepnya?</string>
+    <string name="trivia3">Mulai dengan DailyPlate</string>
+    <string name="trivia_desc3">Anda ingin mencoba perilaku baru dengan memasak makanan sendiri tetapi bingung apa resepnya?</string>
+    <string name="greeting_forgot">Masukkan email yang anda gunakan</string>
+    <string name="email_request">Kirim</string>
 </resources>

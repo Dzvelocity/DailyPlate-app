@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoginFragment"
+    tools:context=".ForgotPassFragment"
     android:background="@drawable/signup_bg">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/selamat_datang"
+        android:text="@string/lupa_sandi"
         android:layout_marginTop="115dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginEnd="200dp"
         android:fontFamily="@font/sf_bold"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -23,9 +23,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/greeting_login"
+        android:text="@string/greeting_forgot"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="55dp"
         android:fontFamily="@font/sf_medium"
         android:textColor="@color/white"
         android:textSize="19sp"
@@ -44,33 +44,6 @@
         android:layout_marginStart="23dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sandi"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/green_30"
-        android:layout_marginTop="355dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/forgot_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_pass"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/green_20"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -97,38 +70,15 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sandi"
+    <Button
+        android:id="@+id/btn_kirim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="378dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:boxBackgroundMode="outline"
-        app:boxBackgroundColor="@color/purple_200"
-        app:hintEnabled="false"
-        android:background="@drawable/editextlayout">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginStart="15dp"
-            android:inputType="textEmailAddress"
-            android:backgroundTint="@color/transparent"
-            android:hint="@string/sandi"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_login2"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
         android:layout_marginStart="54dp"
         android:layout_marginEnd="54dp"
-        android:layout_marginBottom="330dp"
+        android:layout_marginBottom="400dp"
         android:background="@drawable/button_green_background"
-        android:text="@string/masuk"
+        android:text="@string/email_request"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="@font/sf_regular"
@@ -136,7 +86,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
