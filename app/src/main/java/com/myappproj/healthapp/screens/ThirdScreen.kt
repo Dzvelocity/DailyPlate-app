@@ -29,23 +29,13 @@ class ThirdScreen : Fragment() {
 
         login.setOnClickListener {
             findNavController().navigate(R.id.action_onBoardingFragment_to_loginFragment)
-            onBoardingIsFinished()
         }
 
         daftar.setOnClickListener {
             findNavController().navigate(R.id.action_onBoardingFragment_to_signUpFragment)
-            onBoardingIsFinished()
         }
 
         return view
-    }
-
-    private fun onBoardingIsFinished(){
-
-        val sharedPreferences = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("finished",true)
-        editor.apply()
     }
 
 
