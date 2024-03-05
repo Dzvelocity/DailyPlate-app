@@ -115,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="15dp"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:backgroundTint="@color/transparent"
             android:hint="@string/sandi"/>
     </com.google.android.material.textfield.TextInputLayout>

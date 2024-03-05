@@ -22,7 +22,7 @@
         android:id="@+id/dots_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="165dp"
+        android:layout_marginStart="155dp"
         android:layout_marginBottom="140dp"
         app:dotsColor="@color/grey"
         app:dotsCornerRadius="10dp"
@@ -33,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:progressMode="true"
         app:selectedDotColor="@color/green" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

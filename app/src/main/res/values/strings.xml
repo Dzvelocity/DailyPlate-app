@@ -35,4 +35,16 @@
     <string name="trivia_desc3">Anda ingin mencoba perilaku baru dengan memasak makanan sendiri tetapi bingung apa resepnya?</string>
     <string name="greeting_forgot">Masukkan email yang anda gunakan</string>
     <string name="email_request">Kirim</string>
+    <string name="error_empty_name">Please enter your name.</string>
+    <string name="error_empty_email">Please enter your email address.</string>
+    <string name="error_empty_phone">Please enter your phone number.</string>
+    <string name="error_empty_password">Please enter your password.</string>
+    <string name="error_password_mismatch">Passwords do not match.</string>
+    <string name="signup_success">Daftar berhasil</string>
+    <string name="popup_text">Periksa email anda untuk konfirmasi</string>
+    <string name="konf_forgotpass">Oke</string>
+    <string name="popup_pict">popup_pict</string>
+    <string name="title_activity_dots_indicator_sample_compose_fragment">
+        DotsIndicatorSampleComposeFragment
+    </string>
 </resources>

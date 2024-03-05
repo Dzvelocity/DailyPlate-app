@@ -5,55 +5,71 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
+import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ForgotPassFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ForgotPassFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var emailInputLayout: TextInputLayout
+    private lateinit var btnKirim: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forgot_pass, container, false)
+        val view = inflater.inflate(R.layout.fragment_forgot_pass, container, false)
+
+        emailInputLayout = view.findViewById(R.id.email)
+        btnKirim = view.findViewById(R.id.btn_kirim)
+
+        btnKirim.setOnClickListener {
+            val email = emailInputLayout.editText?.text.toString()
+
+            // Check if email is empty
+            if (email.isNullOrEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Please enter your email address!",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
+
+            // Send password reset email using Firebase
+            sendPasswordResetEmail(email)
+        }
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ForgotPassFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ForgotPassFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    private fun sendPasswordResetEmail(email: String) {
+        val auth = FirebaseAuth.getInstance()
+
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Password reset email sent successfully, show custom pop-up
+                    showSuccessPopup()
+                } else {
+                    // Handle the failure if needed
                 }
             }
+    }
+
+    private fun showSuccessPopup() {
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.popup_forgotpass)
+
+        val closeButton = dialog.findViewById<Button>(R.id.btn_oke)
+        closeButton.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.show()
     }
 }

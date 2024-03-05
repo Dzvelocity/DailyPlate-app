@@ -128,7 +128,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nama"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="368dp"
@@ -151,7 +151,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
+        android:id="@+id/nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="283dp"
@@ -191,7 +191,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="15dp"
-            android:inputType="textPersonName"
+            android:inputType="phone"
             android:backgroundTint="@color/transparent"
             android:hint="@string/nomor_telepon"/>
 
@@ -214,7 +214,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="15dp"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:backgroundTint="@color/transparent"
             android:hint="@string/sandi"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -236,7 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="15dp"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:backgroundTint="@color/transparent"
             android:hint="@string/konf_sandi"/>
     </com.google.android.material.textfield.TextInputLayout>
