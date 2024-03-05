@@ -47,4 +47,8 @@
     <string name="title_activity_dots_indicator_sample_compose_fragment">
         DotsIndicatorSampleComposeFragment
     </string>
+    <string name="profile">Profile</string>
+    <string name="resep">Resep</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
 </resources>

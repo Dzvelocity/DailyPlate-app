@@ -12,9 +12,8 @@
         android:theme="@style/Theme.AppProj"
         tools:targetApi="31">
         <activity
-            android:name=".DotsIndicatorSampleComposeFragment"
+            android:name=".SplashFragment"
             android:exported="false"
-            android:label="@string/title_activity_dots_indicator_sample_compose_fragment"
             android:theme="@style/Theme.AppProj" />
         <activity
             android:name=".MainActivity"
