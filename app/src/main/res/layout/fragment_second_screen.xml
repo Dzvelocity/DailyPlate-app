@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".screens.SecondScreen"
+    android:fitsSystemWindows="true"
     android:padding="20dp">
 
 
@@ -13,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="50dp"
         android:contentDescription="@string/healthyfood"
         android:src="@drawable/onboard2_bg"
@@ -28,7 +29,7 @@
         android:fontFamily="@font/sf_bold"
         android:textSize="17sp"
         android:textColor="@color/green_40"
-        android:layout_marginTop="495dp"
+        android:layout_marginTop="450dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -41,7 +42,7 @@
         android:fontFamily="@font/sf_regular"
         android:textSize="13sp"
         android:textColor="@color/black"
-        android:layout_marginTop="530dp"
+        android:layout_marginTop="485dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -52,7 +53,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="54dp"
         android:layout_marginEnd="54dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="680dp"
         android:background="@drawable/button_green_background"
         android:text="@string/selanjutnya"
         android:textAllCaps="false"

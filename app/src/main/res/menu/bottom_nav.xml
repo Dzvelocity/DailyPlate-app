@@ -12,7 +12,7 @@
     <item
         android:title="@string/resep"
         android:id="@+id/resep"
-        android:icon="@drawable/search_ic"/>
+        android:icon="@drawable/resep_ic"/>
     <item
         android:title="@string/profile"
         android:id="@+id/profile"
