@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BahanFragment2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bahan_yang_kurang_sehat"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="26sp"
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:contentDescription="back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:layout_marginTop="42dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginTop="110dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/soda" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/soda"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_laju_kanker_dan_tumor_jinak"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="110dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/krimer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/krimer"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_risiko_penyakit_jantung"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="110dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/daging" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/daging_olahan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/menaikkan_kadar_kolesterol"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginTop="280dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/saus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/saus_instan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_kadar_gula_darah"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="280dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jeroan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/jeroan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/menaikkan_kadar_kolesterol"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="280dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/minuman" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/minuman_kemasan"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_risiko_diabetes"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginTop="620dp"
+                android:layout_marginBottom="100dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/saus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/saus_instan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_kadar_gula_darah"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="620dp"
+                android:layout_marginBottom="100dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jeroan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/jeroan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/menaikkan_kadar_kolesterol"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="620dp"
+                android:layout_marginBottom="100dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/minuman" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/minuman_kemasan"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_risiko_diabetes"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginTop="450dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/soda" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/soda"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_laju_kanker_dan_tumor_jinak"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="450dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/krimer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/krimer"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/meningkatkan_risiko_penyakit_jantung"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="115dp"
+                android:layout_height="152dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="450dp"
+                app:cardBackgroundColor="@color/green_90"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/daging" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="102dp"
+                    android:fontFamily="@font/sf_medium"
+                    android:text="@string/daging_olahan"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="120dp"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="@string/menaikkan_kadar_kolesterol"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

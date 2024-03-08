@@ -61,7 +61,7 @@
     <string name="menurunkan_tekanan_darah">Menurunkan tekanan darah</string>
     <string name="menurunkan_kolesterol">Menurunkan kolesterol</string>
     <string name="buncis">Buncis</string>
-    <string name="mannga">Mannga</string>
+    <string name="mangga">Mangga</string>
     <string name="memperkuat_imun">Memperkuat imun</string>
     <string name="ingin_tahu_kesehatanmu_lebih_lanjut">Ingin Tahu Kesehatanmu Lebih Lanjut?</string>
     <string name="cek_foodiefolio">Cek FoodieFolio</string>
@@ -88,5 +88,16 @@
     <string name="meningkatkan_laju_kanker_dan_tumor_jinak">Meningkatkan laju kanker dan tumor jinak</string>
     <string name="meningkatkan_risiko_penyakit_jantung">Meningkatkan risiko penyakit jantung</string>
     <string name="menaikkan_kadar_kolesterol">Menaikkan kadar kolesterol</string>
+    <string name="ayam">Ayam</string>
+    <string name="tinggi_protein">Tinggi protein</string>
+    <string name="telur_ayam">Telur Ayam</string>
+    <string name="salmon">Salmon</string>
+    <string name="menjaga_kesehatan_otak">Menjaga kesehatan otak</string>
+    <string name="bahan_yang_kurang_sehat">Bahan yang Kurang Sehat</string>
+    <string name="saus_instan">Saus Instan</string>
+    <string name="jeroan">Jeroan</string>
+    <string name="minuman_kemasan">Minuman Kemasan</string>
+    <string name="meningkatkan_kadar_gula_darah">Meningkatkan kadar gula darah</string>
+    <string name="meningkatkan_risiko_diabetes">Meningkatkan risiko diabetes</string>
 
 </resources>

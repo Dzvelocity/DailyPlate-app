@@ -26,7 +26,14 @@
         android:id="@+id/homeFragment"
         android:name="com.myappproj.healthapp.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_bahanFragment1"
+            app:destination="@id/bahanFragment1" />
+        <action
+            android:id="@+id/action_homeFragment_to_bahanFragment2"
+            app:destination="@id/bahanFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.myappproj.healthapp.OnBoardingFragment"
@@ -74,5 +81,23 @@
         <action
             android:id="@+id/action_forgotPassFragment_to_loginFragment3"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bahanFragment1"
+        android:name="com.myappproj.healthapp.BahanFragment1"
+        android:label="fragment_bahan1"
+        tools:layout="@layout/fragment_bahan1" >
+        <action
+            android:id="@+id/action_bahanFragment1_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bahanFragment2"
+        android:name="com.myappproj.healthapp.BahanFragment2"
+        android:label="fragment_bahan2"
+        tools:layout="@layout/fragment_bahan2" >
+        <action
+            android:id="@+id/action_bahanFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
