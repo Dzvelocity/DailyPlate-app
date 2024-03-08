@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_loginFragment_to_forgotPassFragment2"
             app:destination="@id/forgotPassFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment2"
+            app:destination="@id/signUpFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"

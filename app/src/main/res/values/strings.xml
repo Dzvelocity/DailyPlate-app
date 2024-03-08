@@ -45,10 +45,48 @@
     <string name="konf_forgotpass">Oke</string>
     <string name="popup_pict">popup_pict</string>
     <string name="title_activity_dots_indicator_sample_compose_fragment">
-        DotsIndicatorSampleComposeFragment
     </string>
     <string name="profile">Profile</string>
     <string name="resep">Resep</string>
     <string name="search">Search</string>
     <string name="home">Home</string>
+    <string name="daftar_alt">Belum punya akun?</string>
+    <string name="daftaralt"><u>Daftar</u></string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="fast_login">Atau masuk dengan</string>
+    <string name="default_web_client_id">894168586973-79d8unudh4nl5bs0j6hfnpb3qebfaj0t.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">954383739571726</string>
+    <string name="kentang">Kentang</string>
+    <string name="menurunkan_tekanan_darah">Menurunkan tekanan darah</string>
+    <string name="menurunkan_kolesterol">Menurunkan kolesterol</string>
+    <string name="buncis">Buncis</string>
+    <string name="mannga">Mannga</string>
+    <string name="memperkuat_imun">Memperkuat imun</string>
+    <string name="ingin_tahu_kesehatanmu_lebih_lanjut">Ingin Tahu Kesehatanmu Lebih Lanjut?</string>
+    <string name="cek_foodiefolio">Cek FoodieFolio</string>
+    <string name="selamat_datang_di_dailyplate">Selamat Datang di DailyPlate!</string>
+    <string name="home_desc">Mari jelajahi resep, tips, dan panduan gizi untuk mencapai kesehatan optimal!</string>
+    <string name="title_1">Apa Keluhanmu?</string>
+    <string name="title_2">Bahan yang sehat</string>
+    <string name="title_3">Bahan yang Kurang Sehat</string>
+    <string name="title_resep">Yuk, Buat Resep Kamu Sendiri!</string>
+    <string name="herbs_chicken">Herbs Chicken</string>
+    <string name="_78_kkal">78 kkal</string>
+    <string name="smoothie_bowl">Smoothie Bowl</string>
+    <string name="salad_sesame_dressing">Salad Sesame Dressing</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="title_4">Menu Sehat Terpopuler</string>
+    <string name="kolesterol">Kolesterol</string>
+    <string name="pra_operasi">Pra Operasi</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="menu_keluhan">menu keluhan</string>
+    <string name="hipertensi">Hipertensi</string>
+    <string name="soda">Soda</string>
+    <string name="krimer">Krimer</string>
+    <string name="daging_olahan">Daging Olahan</string>
+    <string name="meningkatkan_laju_kanker_dan_tumor_jinak">Meningkatkan laju kanker dan tumor jinak</string>
+    <string name="meningkatkan_risiko_penyakit_jantung">Meningkatkan risiko penyakit jantung</string>
+    <string name="menaikkan_kadar_kolesterol">Menaikkan kadar kolesterol</string>
+
 </resources>

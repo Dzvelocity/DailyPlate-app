@@ -121,7 +121,7 @@
         android:textSize="16sp"
         android:textColor="@color/green_30"
         android:layout_marginTop="750dp"
-        android:layout_marginEnd="102dp"
+        android:layout_marginEnd="105dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
