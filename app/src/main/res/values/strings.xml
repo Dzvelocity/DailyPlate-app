@@ -99,5 +99,14 @@
     <string name="minuman_kemasan">Minuman Kemasan</string>
     <string name="meningkatkan_kadar_gula_darah">Meningkatkan kadar gula darah</string>
     <string name="meningkatkan_risiko_diabetes">Meningkatkan risiko diabetes</string>
+    <string name="profil_title">Profil</string>
+    <string name="edit_profil">Edit Profil</string>
+    <string name="informasi_akun">Informasi Akun</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="ganti_sandi">Ganti Sandi</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="bahasa">Bahasa</string>
+    <string name="pusat_bantuan">Pusat Bantuan</string>
+    <string name="keluar">Keluar</string>
 
 </resources>

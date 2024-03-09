@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/signup_bg"
+    android:fitsSystemWindows="true">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Static TextView, ImageView, and Button -->
     <TextView
+        android:id="@+id/tv_profile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/profil_title"
+        android:fontFamily="@font/sf_bold"
+        android:textSize="33sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"/>
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/pp_profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pp_img"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="470dp"
+        android:layout_below="@+id/tv_profile"/>
+
+    <Button
+        android:id="@+id/edit_profil"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke_rounded10"
+        android:text="@string/edit_profil"
+        android:fontFamily="@font/sf_regular"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="190dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="825dp">
+
+        <Button
+            android:id="@+id/info_akun"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_rounded20"
+            android:text="@string/informasi_akun"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/profile_ic2"
+            android:paddingRight="120dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="310dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_rounded20"
+            android:text="@string/pengaturan"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/set_ic"
+            android:paddingRight="153dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="375dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_rounded20"
+            android:text="@string/ganti_sandi"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/pass_ic"
+            android:paddingRight="150dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="440dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_rounded20"
+            android:text="@string/notifikasi"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/notif_ic"
+            android:paddingRight="170dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="505dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_rounded20"
+            android:text="@string/bahasa"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/lang_ic"
+            android:paddingRight="185dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="570dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_rounded20"
+            android:text="@string/pusat_bantuan"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/green_30"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/help_ic"
+            android:paddingRight="135dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="635dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke_roundedred"
+            android:text="@string/keluar"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:textColor="@color/red"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/logout_ic"
+            android:paddingRight="190dp"
+            android:paddingLeft="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="700dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
