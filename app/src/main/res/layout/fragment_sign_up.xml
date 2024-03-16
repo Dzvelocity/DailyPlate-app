@@ -207,7 +207,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:boxBackgroundMode="outline"
-        app:boxBackgroundColor="@color/purple_200"
         app:hintEnabled="false"
         android:background="@drawable/editextlayout">
         <EditText
@@ -229,7 +228,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:boxBackgroundMode="outline"
-        app:boxBackgroundColor="@color/purple_200"
         app:hintEnabled="false"
         android:background="@drawable/editextlayout">
         <EditText

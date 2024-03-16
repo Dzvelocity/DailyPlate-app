@@ -20,6 +20,10 @@
     <color name="green_50">#A5DDD1</color>
     <color name="neutral_80">#CFCFCF</color>
     <color name="red">#C30505</color>
+    <color name="green_active">#A5DDD7</color>
+    <color name="green_noactive">#C9EBE7</color>
+    <color name="green_sec20">#425856</color>
+    <color name="green_sec30">#638581</color>
 
 
 </resources>

@@ -108,5 +108,30 @@
     <string name="bahasa">Bahasa</string>
     <string name="pusat_bantuan">Pusat Bantuan</string>
     <string name="keluar">Keluar</string>
+    <string name="unggah_resep">Unggah Resep</string>
+    <string name="unggah_foto_menu">Unggah Foto Menu</string>
+    <string name="langkah_1">Langkah 1</string>
+    <string name="informasi_menu">Informasi Menu</string>
+    <string name="nama_menu">Nama Menu</string>
+    <string name="penyakit">Penyakit</string>
+    <string name="kandungan_kalori">Kandungan Kalori</string>
+    <string name="jenis_menu">Jenis Menu</string>
+    <string name="cocok_untuk_penyakit">Cocok untuk Penyakit</string>
+    <string name="resep_makanan">Resep Makanan</string>
+    <string name="resep_saya">Resep Saya</string>
+    <string name="belum_ada_resep_yang_diunggah">Belum Ada Resep yang Diunggah</string>
+    <string name="yuk_buat_kumpulan_resepmu_sendiri">Yuk buat kumpulan resepmu sendiri!</string>
+    <string name="tambah">tambah</string>
+    <string name="langkah_2">Langkah 2</string>
+    <string name="alat">Alat</string>
+    <string name="bahan">Bahan</string>
+    <string name="bahan_bahan">Bahan-bahan</string>
+    <string name="bahan_">+ Bahan</string>
+    <string name="langkah">Langkah</string>
+    <string name="langkah_langkah">Langkah-langkah</string>
+    <string name="langkah_">+ Langkah</string>
+    <string name="unggah">Unggah</string>
+    <string name="makanan">Makanan</string>
+    <string name="step_memasak">Step Memasak</string>
 
 </resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UpResepFragment2">
+
+    <LinearLayout
+        android:id="@+id/uploadresep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unggah_resep"
+        android:fontFamily="@font/sf_bold"
+        android:textColor="@color/green_20"
+        android:textSize="28sp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-22dp"/>
+
+
+        <ImageView
+            android:layout_width="87dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bg_stroke_dark201" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/langkah_2"
+            android:fontFamily="@font/sf_regular"
+            android:textColor="@color/green_20"
+            android:textSize="16sp"
+            android:layout_marginTop="-24dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resep"
+            android:fontFamily="@font/sf_medium"
+            android:textColor="@color/green_20"
+            android:textSize="19sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jenis_menu"
+            android:fontFamily="@font/sf_regular"
+            android:textColor="@color/green_20"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="18dp"/>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:background="@drawable/spinner"
+            android:dropDownVerticalOffset="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alat"
+            android:fontFamily="@font/sf_regular"
+            android:textColor="@color/green_20"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="18dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/isialat"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:boxBackgroundMode="outline"
+            app:hintEnabled="false"
+            android:background="@drawable/editextlayout">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/transparent"
+                android:hint="@string/alat"
+                android:fontFamily="@font/sf_regular"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/btn_bahan"
+            android:layout_width="135dp"
+            android:layout_height="38dp"
+            android:text="@string/bahan_"
+            android:paddingStart="35dp"
+            android:paddingTop="8dp"
+            android:textAllCaps="false"
+            android:textColor="@color/green_30"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:background="@drawable/bg_stroke_rounded10"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/btn_step"
+            android:layout_width="135dp"
+            android:layout_height="38dp"
+            android:paddingStart="28dp"
+            android:paddingTop="8dp"
+            android:text="@string/langkah_"
+            android:textAllCaps="false"
+            android:textColor="@color/green_30"
+            android:fontFamily="@font/sf_medium"
+            android:textSize="16sp"
+            android:background="@drawable/bg_stroke_rounded10"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_green_background2"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="100dp"
+            android:text="@string/unggah"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_regular"
+            android:textSize="19sp"/>
+    </LinearLayout>
+
+</ScrollView>

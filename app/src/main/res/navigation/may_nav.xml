@@ -33,6 +33,20 @@
         <action
             android:id="@+id/action_homeFragment_to_bahanFragment2"
             app:destination="@id/bahanFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_upResepFragment12"
+            app:destination="@id/upResepFragment1" />
+        <action
+            android:id="@+id/action_upResepFragment2_to_homeFragment"
+            app:destination="@id/homeFragment">
+        <argument
+            android:name="itemId"
+            app:argType="string"
+            android:defaultValue="resep" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
@@ -100,4 +114,27 @@
             android:id="@+id/action_bahanFragment2_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/upResepFragment1"
+        android:name="com.myappproj.healthapp.UpResepFragment1"
+        android:label="fragment_up_resep1"
+        tools:layout="@layout/fragment_up_resep1" >
+        <action
+            android:id="@+id/action_upResepFragment1_to_upResepFragment2"
+            app:destination="@id/upResepFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/upResepFragment2"
+        android:name="com.myappproj.healthapp.UpResepFragment2"
+        android:label="fragment_up_resep2"
+        tools:layout="@layout/fragment_up_resep2" >
+        <action
+            android:id="@+id/action_upResepFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainResepFragment"
+        android:name="com.myappproj.healthapp.MainResepFragment"
+        android:label="fragment_main_resep"
+        tools:layout="@layout/fragment_main_resep" />
 </navigation>
