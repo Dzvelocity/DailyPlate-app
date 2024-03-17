@@ -75,6 +75,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation "androidx.navigation:navigation-fragment-ktx"
+    implementation "androidx.navigation:navigation-ui-ktx"
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+
 
     //page indicator
 

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         app:cardBackgroundColor="@color/green_90"
-        app:cardCornerRadius="15dp"
+        app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp">
@@ -41,7 +41,7 @@
             android:id="@+id/nama_makanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="145dp"
             android:fontFamily="@font/sf_medium"
             android:textColor="@color/black"
@@ -49,13 +49,14 @@
 
         <TextView
             android:id="@+id/jml_kalori"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="170dp"
             android:fontFamily="@font/sf_regular"
-            android:textColor="@color/black"
+            android:textColor="@color/green_20"
             android:textSize="13sp" />
+
 
     </androidx.cardview.widget.CardView>
 

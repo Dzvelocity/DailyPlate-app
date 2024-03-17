@@ -38,15 +38,14 @@
             app:destination="@id/upResepFragment1" />
         <action
             android:id="@+id/action_upResepFragment2_to_homeFragment"
-            app:destination="@id/homeFragment">
-        <argument
-            android:name="itemId"
-            app:argType="string"
-            android:defaultValue="resep" />
-        </action>
+            app:destination="@id/homeFragment"/>
         <action
             android:id="@+id/action_homeFragment_to_mainResepFragment"
-            app:destination="@id/mainResepFragment" />
+            app:destination="@id/mainResepFragment" >
+            <argument
+                android:name="menuId"
+                app:argType="string"/>
+        </action>
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"

@@ -2,6 +2,7 @@ package com.myappproj.healthapp
 
 import BahanInputView
 import LangkahInputView
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,12 +12,14 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
 
 class UpResepFragment2 : Fragment() {
 
@@ -31,6 +34,11 @@ class UpResepFragment2 : Fragment() {
     private lateinit var langkahAdapter: LangkahInputView
     private val bahanList: MutableList<String> = mutableListOf()
     private val langkahList: MutableList<String> = mutableListOf()
+    private var filePath: Uri? = null
+    private var menuName: String = ""
+    private var calorieContent: String = ""
+    private var diseases: String = ""
+    private var menuType: String = "Makanan" // Inisialisasi dengan nilai default
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,7 +50,7 @@ class UpResepFragment2 : Fragment() {
         isialat = view.findViewById(R.id.isialat)
         inputBahanRecyclerView = view.findViewById(R.id.recyclerView)
         inputLangkahRecyclerView = view.findViewById(R.id.recyclerView2)
-        btnNext = view.findViewById(R.id.btn_next)
+        btnNext = view.findViewById(R.id.btn_next2)
         btnAddBahan = view.findViewById(R.id.btn_bahan)
         btnAddLangkah = view.findViewById(R.id.btn_step)
 
@@ -77,6 +85,26 @@ class UpResepFragment2 : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Mendapatkan data dari Bundle jika ada
+        arguments?.let {
+            // Ambil data yang disimpan di fragment pertama
+            filePath = it.getParcelable("filePath")
+            menuName = it.getString("menuName", "")
+            calorieContent = it.getString("calorieContent", "")
+            diseases = it.getString("diseases", "")
+            menuType = it.getString("menuType", "Makanan") // Menambahkan menuType di sini
+        }
+
+        // Set listener untuk btnNext
+        btnNext.setOnClickListener {
+            uploadDataToFirebase()
+            findNavController().navigate(R.id.action_upResepFragment2_to_homeFragment2  )
+        }
+    }
+
     private fun initRecyclerViews() {
         // Inisialisasi RecyclerView dan Adapter untuk input bahan
         bahanAdapter = BahanInputView(bahanList)
@@ -105,7 +133,7 @@ class UpResepFragment2 : Fragment() {
                 position: Int,
                 id: Long
             ) {
-                // Lakukan sesuatu dengan item yang dipilih
+                menuType = spinnerData[position]
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -115,23 +143,58 @@ class UpResepFragment2 : Fragment() {
     }
 
     private fun uploadDataToFirebase() {
-        val selectedMenuType = spinner1.selectedItem.toString()
         val alat = isialat.editText?.text.toString()
         val bahan = getBahanListFromAdapter()
         val langkah = getLangkahListFromAdapter()
 
-        // Simpan data ke Firebase Database
-        val database = FirebaseDatabase.getInstance()
-        val ref = database.getReference("resep")
+        // Simpan data ke Firebase Storage
+        val storageRef = FirebaseStorage.getInstance().reference
+        val imageRef = storageRef.child("images/${System.currentTimeMillis()}.jpg")
 
-        val resepData = hashMapOf(
-            "menuType" to selectedMenuType,
-            "alat" to alat,
-            "bahan" to bahan,
-            "langkah" to langkah
-        )
+        filePath?.let { fileUri ->
+            val uploadTask = imageRef.putFile(fileUri)
 
-        ref.push().setValue(resepData)
+            uploadTask.addOnSuccessListener { _ ->
+                // Gambar berhasil diunggah, dapatkan URL-nya
+                imageRef.downloadUrl.addOnSuccessListener { imageUrl ->
+                    // Dapatkan URL gambar yang diunggah
+                    val imageURL = imageUrl.toString()
+
+                    // Tambahkan URL gambar ke data resep
+                    val resepData = hashMapOf(
+                        "menuName" to menuName,
+                        "calorieContent" to calorieContent,
+                        "diseases" to diseases,
+                        "menuType" to menuType,
+                        "imageURL" to imageURL,
+                        "alat" to alat,
+                        "bahan" to bahan,
+                        "langkah" to langkah
+                    )
+
+                    // Simpan data resep ke database Firebase
+                    val database = FirebaseDatabase.getInstance()
+                    val ref = database.getReference("resep")
+                    ref.push().setValue(resepData)
+                        .addOnSuccessListener {
+                            // Data berhasil diunggah
+                            showToast("Data berhasil diunggah")
+                        }
+                        .addOnFailureListener { exception ->
+                            // Data gagal diunggah
+                            showToast("Gagal mengunggah data: ${exception.message}")
+                        }
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Upload gambar gagal
+                    showToast("Gagal mengunggah gambar: ${exception.message}")
+                }
+        } ?: showToast("Silakan pilih gambar terlebih dahulu")
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun getBahanListFromAdapter(): List<String> {
@@ -158,5 +221,3 @@ class UpResepFragment2 : Fragment() {
         return langkahList
     }
 }
-
-

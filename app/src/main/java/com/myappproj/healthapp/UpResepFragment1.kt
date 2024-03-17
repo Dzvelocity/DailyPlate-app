@@ -20,7 +20,6 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 
-
 class UpResepFragment1 : Fragment() {
 
     private val PICK_IMAGE_REQUEST = 1
@@ -65,7 +64,6 @@ class UpResepFragment1 : Fragment() {
 
         spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selectedItem = spinnerData[position]
                 // Lakukan sesuatu dengan item yang dipilih
             }
 
@@ -83,8 +81,21 @@ class UpResepFragment1 : Fragment() {
         val buttonNext: Button = view.findViewById(R.id.btn_next)
         buttonNext.setOnClickListener {
             if (filePath != null) {
-                uploadDataToFirebase()
-                findNavController().navigate(R.id.action_upResepFragment1_to_upResepFragment2)
+                // Simpan data ke variabel global
+                val menuName = isimenu.editText?.text.toString()
+                val calorieContent = isikalori.editText?.text.toString()
+                val diseases = isipenyakit.editText?.text.toString()
+                val menuType = spinner1.selectedItem.toString()
+
+                // Navigasi ke fragment kedua sambil mengirim data melalui Bundle
+                val bundle = Bundle().apply {
+                    putParcelable("filePath", filePath)
+                    putString("menuName", menuName)
+                    putString("calorieContent", calorieContent)
+                    putString("diseases", diseases)
+                    putString("menuType", menuType)
+                }
+                findNavController().navigate(R.id.action_upResepFragment1_to_upResepFragment2, bundle)
             } else {
                 showToast("Silahkan upload gambar")
             }
@@ -130,60 +141,9 @@ class UpResepFragment1 : Fragment() {
         return result ?: ""
     }
 
-    private fun uploadDataToFirebase() {
-        if (filePath != null) {
-            // Mendapatkan nilai dari TextInputLayout
-            val menuName = isimenu.editText?.text.toString()
-            val calorieContent = isikalori.editText?.text.toString()
-            val diseases = isipenyakit.editText?.text.toString()
-            val menuType = spinner1.selectedItem.toString()
-
-            // Memasukkan data ke dalam struktur JSON
-            val menuData = hashMapOf(
-                "menuName" to menuName,
-                "calorieContent" to calorieContent,
-                "diseases" to diseases,
-                "menuType" to menuType
-            )
-
-            // Mendapatkan referensi Firebase Storage
-            val ref = storageReference.reference.child("images/${System.currentTimeMillis()}.jpg")
-
-            ref.putFile(filePath!!)
-                .addOnSuccessListener { taskSnapshot ->
-                    // Jika berhasil mengunggah gambar, dapatkan URL gambar yang diunggah
-                    ref.downloadUrl.addOnSuccessListener { uri ->
-                        val imageURL = uri.toString()
-
-                        // Tambahkan URL gambar ke data yang akan diunggah ke Realtime Database
-                        menuData["imageURL"] = imageURL
-
-                        // Mengirim data ke Firebase Realtime Database
-                        val menuRef = databaseReference.getReference("menus").push()
-                        menuRef.setValue(menuData)
-                            .addOnSuccessListener {
-                                // Berhasil mengirim data
-                                showToast("Data berhasil dikirim")
-                            }
-                            .addOnFailureListener { e ->
-                                // Gagal mengirim data
-                                showToast("Gagal mengirim data: ${e.message}")
-                            }
-                    }
-                }
-                .addOnFailureListener {
-                    // Gagal mengunggah gambar
-                    showToast("Upload gambar gagal")
-                }
-        } else {
-            showToast("Silakan pilih gambar terlebih dahulu")
-        }
-    }
-
     private fun showToast(message: String) {
         val duration = Toast.LENGTH_SHORT
         val toast = Toast.makeText(requireContext(), message, duration)
         toast.show()
     }
 }
-
