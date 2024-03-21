@@ -179,5 +179,9 @@
     <fragment
         android:id="@+id/categoryResepFragment"
         android:name="com.myappproj.healthapp.CategoryResepFragment"
-        android:label="CategoryResepFragment" />
+        android:label="CategoryResepFragment" >
+        <action
+            android:id="@+id/action_categoryResepFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+    </fragment>
 </navigation>

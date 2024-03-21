@@ -57,7 +57,7 @@ class CategoryResepFragment : Fragment(), MyMenuView.MenuClickListener {
         val bundle = Bundle().apply {
             putString("menuName", menuName)
         }
-        findNavController().navigate(R.id.action_homeFragment_to_mainResepFragment, bundle)
+        findNavController().navigate(R.id.action_categoryResepFragment_to_mainResepFragment, bundle)
     }
 
     /**
