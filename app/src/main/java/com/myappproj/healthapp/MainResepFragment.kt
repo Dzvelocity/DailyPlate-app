@@ -16,7 +16,6 @@ import com.google.firebase.database.ValueEventListener
 import com.myappproj.healthapp.model.MenuModel
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
-
 class MainResepFragment : Fragment() {
 
     private lateinit var namaMakanan: TextView
@@ -54,15 +53,29 @@ class MainResepFragment : Fragment() {
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        for (menuSnapshot in snapshot.children) {
+                        val langkahText = StringBuilder()
+                        var stepNumber = 1 // Variabel untuk nomor urutan langkah
+                        val bahanText = StringBuilder() // StringBuilder untuk menyimpan daftar bahan
+
+                        snapshot.children.forEach { menuSnapshot ->
                             val menu = menuSnapshot.getValue(MenuModel::class.java)
                             menu?.let {
                                 namaMakanan.text = it.menuName
-                                jmlKalori.text = it.calorieContent
-                                penyakit.text = it.diseases
-                                listAlat.text = it.alat
-                                listBahan.text = it.bahan.joinToString(", ")
-                                listLangkah.text = it.langkah.joinToString(", ")
+                                jmlKalori.text = it.calorieContent + " kal"
+                                penyakit.text = "Cocok untuk penyakit " + it.diseases
+                                listAlat.text = "• " + it.alat
+
+                                // Menambahkan bahan dengan awalan "• " ke dalam bahanText
+                                it.bahan.forEach { bahan ->
+                                    bahanText.append("• $bahan\n")
+                                }
+
+                                // Menambahkan langkah-langkah dengan nomor urutan ke dalam langkahText
+                                it.langkah.forEach { step ->
+                                    langkahText.append("$stepNumber. $step\n\n")
+                                    stepNumber++
+                                }
+
                                 Glide.with(requireContext())
                                     .load(it.imageURL)
                                     .placeholder(R.drawable.imgview_resep) // Placeholder image
@@ -74,6 +87,9 @@ class MainResepFragment : Fragment() {
                                     .into(imgResep)
                             }
                         }
+                        // Set teks bahan dan langkah ke dalam listBahan dan listLangkah
+                        listBahan.text = bahanText.toString()
+                        listLangkah.text = langkahText.toString()
                     }
                 }
 
@@ -82,8 +98,7 @@ class MainResepFragment : Fragment() {
                 }
             })
 
+
         return view
     }
 }
-
-

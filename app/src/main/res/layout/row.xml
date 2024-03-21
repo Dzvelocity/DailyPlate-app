@@ -21,9 +21,9 @@
 
             <ImageView
                 android:id="@+id/imgkeluhan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/img_keluhan1"
+                android:layout_width="93dp"
+                android:layout_height="75dp"
+                android:src="@drawable/keluhan_imgholder"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>

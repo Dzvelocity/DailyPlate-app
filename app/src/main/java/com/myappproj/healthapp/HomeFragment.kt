@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.myappproj.healthapp.databinding.FragmentHomeBinding
 
-
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
@@ -16,7 +15,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment using data binding
+        // Inflate layout untuk fragment ini menggunakan data binding
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -24,24 +23,26 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Mengganti fragment dengan BerandaFragment saat fragment dibuat
         replaceFragment(BerandaFragment())
 
-        binding.bottomnavigation.setOnItemSelectedListener {
-
-            when (it.itemId) {
+        // Mengatur listener untuk bottom navigation view
+        binding.bottomnavigation.setOnItemSelectedListener { menuItem ->
+            // Mengganti fragment berdasarkan item yang dipilih
+            when (menuItem.itemId) {
                 R.id.home -> replaceFragment(BerandaFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
                 R.id.search -> replaceFragment(SearchFragment())
                 R.id.resep -> replaceFragment(ResepFragment())
-
                 else -> {
+                    // Do nothing for other menu items
                 }
             }
-
             true
         }
     }
 
+    // Fungsi untuk mengganti fragment di container fragment
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = childFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()

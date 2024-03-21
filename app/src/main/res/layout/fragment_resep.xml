@@ -5,9 +5,10 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/page_resep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/unggah_resep"
+        android:text=""
         android:fontFamily="@font/sf_bold"
         android:textColor="@color/green_20"
         android:textSize="28sp"
@@ -56,7 +57,6 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp"
         android:layout_below="@+id/button1"/>
 
 </RelativeLayout>

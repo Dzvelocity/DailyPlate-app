@@ -27,7 +27,7 @@ class MyMenuView(private val listener: MenuClickListener? = null) : RecyclerView
             .centerCrop() // Placeholder image while loading
             .into(holder.imageView)
         holder.namaMakananTextView.text = currentMenu.menuName
-        holder.jmlKaloriTextView.text = currentMenu.calorieContent + " kkal"
+        holder.jmlKaloriTextView.text = currentMenu.calorieContent + " kal"
         holder.tagMenuTextView.text = currentMenu.menuType
 
         // Set onClickListener di dalam onBindViewHolder

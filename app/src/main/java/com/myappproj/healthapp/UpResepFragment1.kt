@@ -20,6 +20,9 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 
+/**
+ * Fragment untuk mengunggah resep dan detailnya, termasuk gambar.
+ */
 class UpResepFragment1 : Fragment() {
 
     private val PICK_IMAGE_REQUEST = 1
@@ -33,6 +36,9 @@ class UpResepFragment1 : Fragment() {
     private lateinit var isipenyakit: TextInputLayout
     private lateinit var spinner1: Spinner
 
+    /**
+     * Metode untuk membuat tampilan fragment.
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,6 +47,9 @@ class UpResepFragment1 : Fragment() {
         return inflater.inflate(R.layout.fragment_up_resep1, container, false)
     }
 
+    /**
+     * Metode yang dipanggil setelah tampilan dibuat.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -102,6 +111,9 @@ class UpResepFragment1 : Fragment() {
         }
     }
 
+    /**
+     * Metode untuk memilih gambar dari galeri.
+     */
     private fun pickImageFromGallery() {
         val intent = Intent()
         intent.type = "image/*"
@@ -109,6 +121,9 @@ class UpResepFragment1 : Fragment() {
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST)
     }
 
+    /**
+     * Metode yang dipanggil setelah pemilihan gambar dari galeri.
+     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -121,6 +136,9 @@ class UpResepFragment1 : Fragment() {
         }
     }
 
+    /**
+     * Metode untuk mendapatkan nama file dari URI.
+     */
     private fun getFileName(uri: Uri?): String {
         var result: String? = null
         if (uri?.scheme == "content") {
@@ -141,6 +159,9 @@ class UpResepFragment1 : Fragment() {
         return result ?: ""
     }
 
+    /**
+     * Metode untuk menampilkan pesan Toast.
+     */
     private fun showToast(message: String) {
         val duration = Toast.LENGTH_SHORT
         val toast = Toast.makeText(requireContext(), message, duration)

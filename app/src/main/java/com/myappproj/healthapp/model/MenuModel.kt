@@ -8,5 +8,6 @@ data class MenuModel(
     val diseases: String? = "",
     val bahan: List<String> = emptyList(),
     val langkah: List<String> = emptyList(),
-    val menuType: String = ""
+    val menuType: String = "",
+    val userId: String = ""
 )

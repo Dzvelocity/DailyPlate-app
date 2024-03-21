@@ -22,45 +22,61 @@ class ForgotPassFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate layout untuk fragment ini
         val view = inflater.inflate(R.layout.fragment_forgot_pass, container, false)
 
+        // Inisialisasi view
         emailInputLayout = view.findViewById(R.id.email)
         btnKirim = view.findViewById(R.id.btn_kirim)
 
+        // Atur listener klik untuk tombol "Kirim"
         btnKirim.setOnClickListener {
+            // Dapatkan input email
             val email = emailInputLayout.editText?.text.toString()
 
-            // Check if email is empty
+            // Periksa apakah email kosong
             if (email.isNullOrEmpty()) {
                 Toast.makeText(
                     requireContext(),
-                    "Please enter your email address!",
+                    "Silakan masukkan alamat email Anda!",
                     Toast.LENGTH_SHORT
                 ).show()
                 return@setOnClickListener
             }
 
-            // Send password reset email using Firebase
+            // Kirim email reset kata sandi menggunakan Firebase
             sendPasswordResetEmail(email)
         }
 
         return view
     }
 
+    /**
+     * Mengirim email reset kata sandi ke alamat email yang diberikan.
+     */
     private fun sendPasswordResetEmail(email: String) {
         val auth = FirebaseAuth.getInstance()
 
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    // Password reset email sent successfully, show custom pop-up
+                    // Email reset kata sandi berhasil dikirim, tampilkan pop-up kustom
                     showSuccessPopup()
                 } else {
-                    // Handle the failure if needed
+                    // Tangani kegagalan jika diperlukan
+                    // Misalnya, tampilkan toast yang menunjukkan kegagalan
+                    Toast.makeText(
+                        requireContext(),
+                        "Gagal mengirim email reset kata sandi. Pastikan alamat email Anda benar.",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
 
+    /**
+     * Menampilkan dialog kustom untuk menunjukkan bahwa email reset kata sandi telah berhasil dikirim.
+     */
     private fun showSuccessPopup() {
         val dialog = Dialog(requireContext())
         dialog.setContentView(R.layout.popup_forgotpass)
@@ -69,6 +85,8 @@ class ForgotPassFragment : Fragment() {
         closeButton.setOnClickListener {
             dialog.dismiss()
         }
+
+        // Atur latar belakang dialog menjadi transparan
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
     }

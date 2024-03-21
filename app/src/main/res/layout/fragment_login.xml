@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginFragment"
     android:background="@drawable/signup_bg">
@@ -11,27 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/selamat_datang"
-        android:layout_marginTop="115dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/sf_bold"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/greeting_login"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/sf_medium"
         android:textColor="@color/white"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textSize="19sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,89 +34,16 @@
         android:fontFamily="@font/sf_medium"
         android:textSize="16sp"
         android:textColor="@color/green_30"
-        android:layout_marginTop="265dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sandi"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/green_30"
-        android:layout_marginTop="355dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/forgot_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_pass"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/green_20"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/daftar_alt"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="730dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/btn_daftaralt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/daftaralt"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/green_30"
-        android:layout_marginTop="730dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fast_login"
-        android:fontFamily="@font/sf_medium"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="550dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="23dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:boxBackgroundMode="outline"
         app:boxBackgroundColor="@color/purple_200"
         app:hintEnabled="false"
@@ -137,16 +58,23 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sandi"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="16sp"
+        android:textColor="@color/green_30"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="23dp"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sandi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="378dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:boxBackgroundMode="outline"
         app:boxBackgroundColor="@color/purple_200"
         app:hintEnabled="false"
@@ -160,42 +88,74 @@
             android:hint="@string/sandi"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_pass"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="16sp"
+        android:textColor="@color/green_20"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="290dp" />
+
     <Button
         android:id="@+id/btn_login2"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="310dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button_green_background"
         android:text="@string/masuk"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="@font/sf_regular"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="19sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fast_login"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/btn_google"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="215dp"
-        android:paddingHorizontal="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_white_background"
         android:drawableStart="@drawable/google_ic"
+        android:paddingHorizontal="30dp"
         android:text="@string/google"
         android:textAllCaps="false"
         android:textColor="@color/green"
         android:fontFamily="@font/sf_regular"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="19sp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daftar_alt"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="105dp"/>
 
+    <TextView
+        android:id="@+id/btn_daftaralt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daftaralt"
+        android:fontFamily="@font/sf_medium"
+        android:textSize="16sp"
+        android:textColor="@color/green_30"
+        android:layout_marginTop="-21dp"
+        android:layout_marginStart="245dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

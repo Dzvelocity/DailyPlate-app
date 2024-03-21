@@ -46,6 +46,24 @@
                 android:name="menuId"
                 app:argType="string"/>
         </action>
+        <action
+            android:id="@+id/action_homeFragment_to_searchHasilFragment"
+            app:destination="@id/searchHasilFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mainKeluhanFragment"
+            app:destination="@id/mainKeluhanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gantiSandiFragment"
+            app:destination="@id/gantiSandiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_healthNewsFragment"
+            app:destination="@id/healthNewsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryResepFragment"
+            app:destination="@id/categoryResepFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
@@ -136,4 +154,30 @@
         android:name="com.myappproj.healthapp.MainResepFragment"
         android:label="fragment_main_resep"
         tools:layout="@layout/fragment_main_resep" />
+    <fragment
+        android:id="@+id/searchHasilFragment"
+        android:name="com.myappproj.healthapp.SearchHasilFragment"
+        android:label="fragment_search_hasil"
+        tools:layout="@layout/fragment_search_hasil" >
+        <action
+            android:id="@+id/action_searchHasilFragment_to_mainResepFragment"
+            app:destination="@id/mainResepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainKeluhanFragment"
+        android:name="com.myappproj.healthapp.MainKeluhanFragment"
+        android:label="MainKeluhanFragment" />
+    <fragment
+        android:id="@+id/gantiSandiFragment"
+        android:name="com.myappproj.healthapp.GantiSandiFragment"
+        android:label="GantiSandiFragment" />
+    <fragment
+        android:id="@+id/healthNewsFragment"
+        android:name="com.myappproj.healthapp.HealthNewsFragment"
+        android:label="fragment_health_news"
+        tools:layout="@layout/fragment_health_news" />
+    <fragment
+        android:id="@+id/categoryResepFragment"
+        android:name="com.myappproj.healthapp.CategoryResepFragment"
+        android:label="CategoryResepFragment" />
 </navigation>

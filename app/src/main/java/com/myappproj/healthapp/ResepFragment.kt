@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -39,7 +40,6 @@ class ResepFragment : Fragment() {
         // Atur listener untuk ViewPager
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                // Sesuaikan tampilan button saat fragment berubah
                 when (position) {
                     0 -> {
                         button1.setBackgroundResource(R.drawable.bg_tabselected)
@@ -47,6 +47,9 @@ class ResepFragment : Fragment() {
 
                         button1.typeface = resources.getFont(R.font.sf_medium)
                         button2.typeface = resources.getFont(R.font.sf_regular)
+
+                        // Ubah teks TextView menjadi "Resep Makanan"
+                        view.findViewById<TextView>(R.id.page_resep).text = "Resep Makanan"
                     }
                     1 -> {
                         button2.setBackgroundResource(R.drawable.bg_tabselected)
@@ -54,6 +57,9 @@ class ResepFragment : Fragment() {
 
                         button2.typeface = resources.getFont(R.font.sf_medium)
                         button1.typeface = resources.getFont(R.font.sf_regular)
+
+                        // Ubah teks TextView menjadi "Resep Saya"
+                        view.findViewById<TextView>(R.id.page_resep).text = "Resep Saya"
                     }
                 }
             }

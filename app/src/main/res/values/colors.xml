@@ -24,6 +24,7 @@
     <color name="green_noactive">#C9EBE7</color>
     <color name="green_sec20">#425856</color>
     <color name="green_sec30">#638581</color>
+    <color name="green_sec50">#A5DDD7</color>
 
 
 </resources>
