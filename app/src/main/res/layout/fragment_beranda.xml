@@ -41,16 +41,22 @@
             android:layout_marginTop="655dp"
             android:paddingLeft="10dp"/>
 
-        <TextView
-            android:id="@+id/all_2"
-            android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lihat_semua"
-            android:fontFamily="@font/sf_bold"
-            android:textColor="@color/green_20"
-            android:textSize="13sp"
-            android:layout_marginTop="680dp"
-            android:layout_marginLeft="295dp"/>
+            android:layout_marginTop="320dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="470dp"/>
 
         <TextView
             android:id="@+id/all_1"
@@ -63,28 +69,22 @@
             android:layout_marginTop="465dp"
             android:layout_marginLeft="295dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="1dp">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="330dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView2"
-            android:layout_width="match_parent"
-            android:layout_height="175dp"
-            android:layout_marginTop="480dp"/>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView3"
             android:layout_width="match_parent"
-            android:layout_height="175dp"
-            android:layout_marginTop="695dp"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="685dp"/>
+
+        <TextView
+            android:id="@+id/all_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_semua"
+            android:fontFamily="@font/sf_bold"
+            android:textColor="@color/green_20"
+            android:textSize="13sp"
+            android:layout_marginTop="680dp"
+            android:layout_marginLeft="295dp"/>
 
     </RelativeLayout>
 

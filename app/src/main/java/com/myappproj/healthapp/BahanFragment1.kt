@@ -39,8 +39,8 @@ class BahanFragment1 : Fragment() {
 
         // Menambahkan event listener untuk tombol back_arrow
         textBahan1.setOnClickListener {
-            // Navigasi ke HomeFragment2 saat tombol diklik
-            findNavController().navigate(R.id.action_bahanFragment1_to_homeFragment2)
+            // Navigasi ke fragmen sebelumnya saat tombol diklik
+            findNavController().navigateUp()
         }
 
         return view

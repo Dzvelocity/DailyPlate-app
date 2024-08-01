@@ -80,10 +80,6 @@ class MainResepFragment : Fragment() {
                                     .load(it.imageURL)
                                     .placeholder(R.drawable.imgview_resep) // Placeholder image
                                     .centerCrop() // Center crop
-                                    .transform(
-                                        RoundedCornersTransformation(80, 0,
-                                            RoundedCornersTransformation.CornerType.TOP)
-                                    )
                                     .into(imgResep)
                             }
                         }

@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -41,6 +42,7 @@ class UpResepFragment2 : Fragment() {
     private lateinit var btnAddLangkah: TextView
     private lateinit var bahanAdapter: BahanInputView
     private lateinit var langkahAdapter: LangkahInputView
+    private lateinit var back: ImageView
     private lateinit var auth: FirebaseAuth
     private val bahanList: MutableList<String> = mutableListOf()
     private val langkahList: MutableList<String> = mutableListOf()
@@ -67,6 +69,11 @@ class UpResepFragment2 : Fragment() {
         btnUpload = view.findViewById(R.id.btn_next2)
         btnAddBahan = view.findViewById(R.id.btn_bahan)
         btnAddLangkah = view.findViewById(R.id.btn_step)
+        back = view.findViewById(R.id.back_arrow2)
+
+        back.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
         // Inisialisasi RecyclerView dan Adapter untuk input bahan dan langkah
         initRecyclerViews()

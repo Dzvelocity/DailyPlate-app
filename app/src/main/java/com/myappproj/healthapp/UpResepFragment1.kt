@@ -35,6 +35,7 @@ class UpResepFragment1 : Fragment() {
     private lateinit var isikalori: TextInputLayout
     private lateinit var isipenyakit: TextInputLayout
     private lateinit var spinner1: Spinner
+    private lateinit var back: ImageView
 
     /**
      * Metode untuk membuat tampilan fragment.
@@ -64,6 +65,11 @@ class UpResepFragment1 : Fragment() {
         isikalori = view.findViewById(R.id.isikalori)
         isipenyakit = view.findViewById(R.id.isipenyakit)
         spinner1 = view.findViewById(R.id.spinner1)
+        back = view.findViewById(R.id.back_arrow)
+
+        back.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
         // Inisialisasi Spinner
         val spinner1 = view.findViewById<Spinner>(R.id.spinner1)
